@@ -71,7 +71,7 @@ BleMouse::BleMouse(std::string deviceName, std::string deviceManufacturer, uint8
 
 void BleMouse::begin(void)
 {
-  xTaskCreate(this->taskServer, "server", 20000, (void *)this, 5, NULL);
+  xTaskCreate(this->taskServer, "mserver", 20000, (void *)this, 5, NULL);
 }
 
 void BleMouse::end(void)
