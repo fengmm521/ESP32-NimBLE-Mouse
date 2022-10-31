@@ -7,7 +7,7 @@
 #include <driver/adc.h>
 #include "sdkconfig.h"
 
-#include "BleConnectionStatus.h"
+#include "BleMouseConnectionStatus.h"
 #include "BleMouse.h"
 
 #if defined(CONFIG_ARDUHAL_ESP_LOG)
@@ -66,7 +66,7 @@ BleMouse::BleMouse(std::string deviceName, std::string deviceManufacturer, uint8
   this->deviceName = deviceName;
   this->deviceManufacturer = deviceManufacturer;
   this->batteryLevel = batteryLevel;
-  this->connectionStatus = new BleConnectionStatus();
+  this->connectionStatus = new BleMouseConnectionStatus();
 }
 
 void BleMouse::begin(void)

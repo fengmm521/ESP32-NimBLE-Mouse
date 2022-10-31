@@ -3,7 +3,7 @@
 #include "sdkconfig.h"
 #if defined(CONFIG_BT_ENABLED)
 
-#include "BleConnectionStatus.h"
+#include "BleMouseConnectionStatus.h"
 #include "NimBLEHIDDevice.h"
 #include "NimBLECharacteristic.h"
 
@@ -14,10 +14,12 @@
 #define MOUSE_FORWARD 16
 #define MOUSE_ALL (MOUSE_LEFT | MOUSE_RIGHT | MOUSE_MIDDLE) # For compatibility with the Mouse library
 
+class BleMouseConnectionStatus;
+
 class BleMouse {
 private:
   uint8_t _buttons;
-  BleConnectionStatus* connectionStatus;
+  BleMouseConnectionStatus* connectionStatus;
   NimBLEHIDDevice* hid;
   NimBLECharacteristic* inputMouse;
   void buttons(uint8_t b);
