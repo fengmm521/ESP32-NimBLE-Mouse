@@ -14,7 +14,6 @@
 #define MOUSE_FORWARD 16
 #define MOUSE_ALL (MOUSE_LEFT | MOUSE_RIGHT | MOUSE_MIDDLE) # For compatibility with the Mouse library
 
-class BleMouseConnectionStatus;
 
 class BleMouse {
 private:
